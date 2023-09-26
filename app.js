@@ -110,7 +110,6 @@ app.put('/socios/v1/ventas/:id', (req, res) => {
 
 		if (posActualizar !== -1) {
 			// Si se encontró el ID
-			// Actualizar el nombre y la descripción de la Venta
 			ventas[posActualizar].fecha = fecha;
 			ventas[posActualizar].id_del_cliente = id_del_cliente;
 			ventas[posActualizar].total_de_venta = total_de_venta;
