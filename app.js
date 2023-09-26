@@ -65,9 +65,6 @@ app.use(jsonParser); //Utilizar middleware
 
 app.post('/socios/v1/ventas', jsonParser, (req, res) => {
 	// crear un recurso (venta)
-	//requiere: id (generado por el server),
-	//nombre y descripcion (introducidas x el user y se obtienen del body)
-
 	const { fecha, id_del_cliente, total_de_venta } = req.body; //Destructuring de objetos
 	const id = Math.round(Math.random() * 1000); // generar el ID
 
