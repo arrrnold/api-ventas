@@ -18,7 +18,6 @@ let ventas = [
 	{ id: 9, fecha: "29-3-23", id_del_cliente: 192, total_de_venta: 455.5 },
 	{ id: 10, fecha: "30-3-23", id_del_cliente: 912, total_de_venta: 234.5 }];
 
-
 // consultas
 
 app.get('/socios/v1/ventas', (req, res) => {
@@ -36,9 +35,6 @@ app.get('/socios/v1/ventas', (req, res) => {
 			mensaje: 'ventas obtenidas con exito'
 		})
 	}
-
-
-	res.send('Obtener todas las ventas')
 })
 
 app.get('/socios/v1/ventas/:id', (req, res) => {
@@ -110,6 +106,7 @@ app.put('/socios/v1/ventas/:id', (req, res) => {
 
 		if (posActualizar !== -1) {
 			// Si se encontró el ID
+			// Actualizar el nombre y la descripción de la Venta
 			ventas[posActualizar].fecha = fecha;
 			ventas[posActualizar].id_del_cliente = id_del_cliente;
 			ventas[posActualizar].total_de_venta = total_de_venta;
